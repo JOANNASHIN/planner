@@ -1,43 +1,49 @@
 <template>
   <main class="search">
-    <h1 class="blind">검색 페이지</h1>
+    <h1>타임박스 페이지</h1>
 
-    <!-- 상단 검색 form -->
-    <header class="search__header">
-      <SearchFormComponent
-        v-model="form"
-        @submit="handleSearch()"
-      ></SearchFormComponent>
-    </header>
+    <span>
+      <em>날짜:</em>
+      <label for="">
+        <input type="date">
+      </label>
+    </span>
 
-    <!-- 하단 검색 결과 -->
-    <section class="search__cont">
-      <h2 class="blind">검색 결과 리스트</h2>
-
-      <!-- 로딩 프로그래스바 -->
-      <LoadingComponent
-        v-if="fetches.search === FetchesState.Wait"
-      ></LoadingComponent>
-
-      <!-- 정상 케이스 -->
-      <template v-if="fetches.search === FetchesState.Success">
-        <InfiniteScrollComponent
-          v-model="pagination"
-          :process="process.more"
-          @next="handleNextPage()"
-          @retry="handleRetry()"
-        >
-          <ImageListComponent v-model="imageList"></ImageListComponent>
-        </InfiniteScrollComponent>
-      </template>
-
-      <!-- 에러케이스 -->
-      <ErrorComponent
-        v-else-if="fetches.search === FetchesState.Error"
-        @retry="handleRetry()"
-      >
-      </ErrorComponent>
-    </section>
+    <dl>
+      <dt>
+        가장 중요한 3가지
+      </dt>
+      <dd>
+        <ol>
+          <li>
+            <input type="text">
+          </li>
+          <li>
+            <input type="text">
+          </li>
+          <li>
+            <input type="text">
+          </li>
+        </ol>
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        브레인 덤프 - 쏟아내기
+      </dt>
+      <dd>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+      </dd>
+    </dl>
+    
+    <dl>
+      <dt>
+        브레인 덤프 - 쏟아내기
+      </dt>
+      <dd>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+      </dd>
+    </dl>
   </main>
 </template>
 
