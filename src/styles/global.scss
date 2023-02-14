@@ -1,0 +1,20 @@
+/**
+ * vite.config.ts 에서 호출
+ * module관련 scss 모음
+ */
+
+/**
+ * rem 설정
+ */
+@import 'sass-rem';
+$rem-baseline: 10px;
+
+/**
+ * 변수 모음
+ */
+@import './modules/variables.scss';
+
+/**
+ * mixin 모음
+ */
+@import './modules/mixins.scss';
