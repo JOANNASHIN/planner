@@ -1,11 +1,17 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
-import SearchView from '@/views/TimeBox.vue';
+import TimeBox from '@/views/TimeBox.vue';
+import Goal from '@/views/Goal.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'search',
-    component: SearchView,
+    name: 'goal',
+    component: Goal,
+  },
+  {
+    path: '/timeBox',
+    name: 'timeBox',
+    component: TimeBox,
   },
 ];
 
